@@ -8,6 +8,10 @@
         path: ~/awx-workflow
         state: directory
     
+    - name: Wait 30 seconds to observe logs
+      pause:
+        seconds: 30
+    
     - name: Display step 1 message
       debug:
         msg: "Step 1 completed successfully!"
