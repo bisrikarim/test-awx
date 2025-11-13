@@ -1,0 +1,12 @@
+---
+- name: Step 3 - Cleanup
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Display step 3 message
+      debug:
+        msg: "Step 3 - Cleanup completed!"
+    
+    - name: Show workflow completion
+      debug:
+        msg: "All workflow steps completed successfully!"
