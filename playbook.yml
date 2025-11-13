@@ -1,0 +1,10 @@
+---
+- name: Playbook de test local
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Afficher un message
+      debug:
+        msg: "✅ Ansible fonctionne correctement en local !"
