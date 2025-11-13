@@ -1,10 +1,8 @@
 ---
-- name: Playbook de test local
+- name: Hello World Playbook
   hosts: localhost
-  connection: local
   gather_facts: false
-
   tasks:
-    - name: Afficher un message
+    - name: Display hello message
       debug:
-        msg: "✅ Ansible fonctionne correctement en local !"
+        msg: "Hello from AWX!"
