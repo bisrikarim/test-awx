@@ -6,8 +6,7 @@
     - name: Create a test file
       copy:
         content: "Workflow test file"
-        dest: /tmp/awx-workflow/test.txt
-      become: yes
+        dest: ~/awx-workflow/test.txt
     
     - name: Display step 2 message
       debug:
