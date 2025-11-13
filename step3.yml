@@ -1,12 +1,14 @@
 ---
-- name: Step 3 - Cleanup
+- name: Step 1 - Preparation
   hosts: localhost
   gather_facts: false
   tasks:
-    - name: Display step 3 message
-      debug:
-        msg: "Step 3 - Cleanup completed!"
+    - name: Create temporary directory
+      file:
+        path: /tmp/awx-workflow
+        state: directory
+      # Pas de become: yes
     
-    - name: Show workflow completion
+    - name: Display step 1 message
       debug:
-        msg: "All workflow steps completed successfully!"
+        msg: "Step 1 completed successfully!"
