@@ -3,6 +3,11 @@
   hosts: localhost
   gather_facts: false
   tasks:
+    - name: Ensure directory exists
+      file:
+        path: ~/awx-workflow
+        state: directory
+    
     - name: Create a test file
       copy:
         content: "Workflow test file"
