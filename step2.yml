@@ -8,6 +8,10 @@
         path: ~/awx-workflow
         state: directory
     
+    - name: Wait 30 seconds to observe logs
+      pause:
+        seconds: 30
+    
     - name: Create a test file
       copy:
         content: "Workflow test file"
