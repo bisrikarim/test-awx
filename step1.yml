@@ -5,9 +5,8 @@
   tasks:
     - name: Create temporary directory
       file:
-        path: /tmp/awx-workflow
+        path: ~/awx-workflow
         state: directory
-      become: yes
     
     - name: Display step 1 message
       debug:
