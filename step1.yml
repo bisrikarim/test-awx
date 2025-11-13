@@ -1,0 +1,14 @@
+---
+- name: Step 1 - Preparation
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create temporary directory
+      file:
+        path: /tmp/awx-workflow
+        state: directory
+      become: yes
+    
+    - name: Display step 1 message
+      debug:
+        msg: "Step 1 completed successfully!"
