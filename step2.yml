@@ -1,0 +1,14 @@
+---
+- name: Step 2 - Processing
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create a test file
+      copy:
+        content: "Workflow test file"
+        dest: /tmp/awx-workflow/test.txt
+      become: yes
+    
+    - name: Display step 2 message
+      debug:
+        msg: "Step 2 completed successfully!"
